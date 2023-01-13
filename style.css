@@ -13,17 +13,20 @@ ul {
   list-style-type: none;
 }
 body {
-  background-color: black;
+  background-color: whitesmoke;
 }
 
-.topp {
+#topp {
   position: sticky;
   background-color: brown;
   height: 12vh;
 }
 
-.kropp {
-  background-color: whitesmoke;
+.anime_video_div {
+  width: 100%;
+}
+.anime_video {
+  width: 100%;
 }
 
 .container {
@@ -32,30 +35,18 @@ body {
   margin-top: 20vh;
 }
 .bildlåda {
-  padding: 2px;
-  width: 12vw;
-  height: 30vh;
+  padding: 1px;
+  width: 200px;
+  height: 300px;
   margin: 10px;
+  border: 3px dashed black;
 }
 
-.cardtext {
-  background-color: blueviolet;
-}
-
-.bildlåda,
-img {
+.bildlåda img {
   width: 200px;
   height: 200px;
 }
 
-@media screen and (min-width: 680px) {
-  .kropp {
-    margin: 0px 100px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .kropp {
-    margin: 0px 200px;
-  }
+.bildtext {
+  background-color: blueviolet;
 }
