@@ -1,29 +1,40 @@
 /*https://www.w3schools.com/howto/howto_css_cards.asp*/
 
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
 * {
   margin: 0%;
-}
-p {
-  color: aqua;
+  padding: 0%;
 }
 
-ul {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
+p {
+  color: darkgreen;
+}
+
+header {
+  position: fixed;
+  display: block;
+  top: 0;
+  background-color: brown;
+  width: 100vw;
+  height: 12vh;
+  border: 2px black solid;
+}
+h1 {
+  text-align: center;
+}
+i {
+  position: fixed;
+  top: 3px;
+  left: 3px;
 }
 body {
   background-color: whitesmoke;
 }
 
-#topp {
-  position: sticky;
-  background-color: brown;
-  height: 12vh;
-}
-
 .anime_video_div {
-  width: 100%;
+  position: static;
+  top: 12vh;
 }
 .anime_video {
   width: 100%;
@@ -41,12 +52,76 @@ body {
   margin: 10px;
   border: 3px dashed black;
 }
+.bildlåda p {
+  font-family: Dancing Script, sans-serif;
+  font-size: large;
+}
 
 .bildlåda img {
   width: 200px;
   height: 200px;
 }
 
-.bildtext {
-  background-color: blueviolet;
+/* Hamburgare*/
+
+.hamburgare_intro {
+  font-size: 30px;
+  margin-top: 12vh;
+}
+.hamburgare_recept_bild {
+  width: 700px;
+}
+.hamburgare_bild_div {
+  border: 5px;
+  border-color: darkgreen;
+}
+
+.ingredienser_låda {
+  margin-top: 20px;
+  width: 40vw;
+}
+.ingrediens {
+  width: 300px;
+  height: 30px;
+  margin-top: 1vh;
+  margin-left: 5vw;
+  background-color: #9f8c76;
+  border-radius: 10%;
+  font-size: 25px;
+}
+
+.flex_låda {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recept {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recept_steg_div {
+  font-size: 30px;
+  width: 300px;
+  height: 210px;
+  background-color: #9f8c76;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+@media screen and (max-width: 740px) {
+  .hamburgare_recept_bild {
+    width: 100vw;
+  }
 }
