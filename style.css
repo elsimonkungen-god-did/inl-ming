@@ -1,4 +1,26 @@
-/*https://www.w3schools.com/howto/howto_css_cards.asp*/
+@keyframes snurr {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bakrund_animation {
+  0% {
+    background-color: black;
+  }
+  25% {
+    background-color: beige;
+  }
+  50% {
+    background-color: black;
+  }
+  75% {
+    background-color: beige;
+  }
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 
@@ -18,9 +40,10 @@ header {
   background-color: brown;
   width: 100vw;
   height: 12vh;
-  border: 2px black solid;
+  border: 2px black dotted;
   z-index: 1;
 }
+
 h1 {
   text-align: center;
 }
@@ -28,19 +51,21 @@ h1 {
 .fa-solid {
   position: fixed;
   top: 0px;
+  color: black;
+  transition: color 1.5s ease-out;
+}
+.fa-solid :hover {
+  color: blue;
 }
 
 body {
   background-color: whitesmoke;
 }
 
-.anime_video_div {
-  margin-top: 12vh;
-  z-index: -1;
-}
 .anime_video {
   width: 100%;
   z-index: -1;
+  margin-top: 12vh;
 }
 
 .container {
@@ -93,7 +118,13 @@ body {
   font-size: 25px;
 }
 
-.flex_låda {
+.ingrediens :hover {
+  animation-name: snurr;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.main {
   display: flex;
   flex-wrap: wrap;
 }
@@ -104,7 +135,7 @@ body {
 .recept_steg_div {
   font-size: 30px;
   width: 300px;
-  height: 210px;
+  height: 230px;
   background-color: #9f8c76;
   border-width: 3px;
   border-style: solid;
@@ -119,12 +150,46 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   color: blue;
+  transition: color 1s;
+}
+
+a h3 :hover {
+  text-decoration: underline;
+}
+
+/* formulär */
+.formulär {
+  width: 310px;
+  height: 450px;
+  border: 5px dashed black;
+  margin: auto;
+  margin-top: calc(12vh + 5px);
+  background-color: aliceblue;
+}
+
+#formulär_kropp {
+  animation-name: bakrund_animation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+input,
+label :not(input[type="textarea"]) {
+  display: block;
+}
+
+input[type="textarea"] {
+  width: 75%;
+  height: 150px;
 }
 
 @media screen and (max-width: 740px) {
   .hamburgare_recept_bild {
     width: 100vw;
+  }
+  .formulär {
+    width: calc(100vw - 10px);
+    left: 0vw;
   }
 }

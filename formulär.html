@@ -10,13 +10,67 @@
       src="https://kit.fontawesome.com/365a307b4e.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/365a307b4e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
   </head>
-  <body>
+  <body id="formulär_kropp">
     <header>
       <h1>Matens paradis</h1>
-      <a href="index.html">
-        <i class="fa-solid fa-house fa-4x"></i>
-      </a>
+      <a class="fa-solid fa-house fa-4x" href="index.html"></a>
     </header>
+    <div class="formulär">
+      <form>
+        <label for="id_förnamn">Förnamn:</label><br />
+        <input
+          type="text"
+          id="id_förnamn"
+          name="förstanamn"
+          placeholder="Förnamn"
+        /><br />
+        <label for="id_efternamn">Efternamn:</label><br />
+        <input
+          type="text"
+          id="id_efternamn"
+          name="efternamn"
+          placeholder="Efternamn"
+        />
+        <br />
+        <br />
+        <label for="id_man">man</label>
+        <input type="radio" id="id_man" name="kön" value="man" />
+        <label for="id_kvinna">kvinna</label>
+        <input type="radio" id="id_kvinna" name="kön" value="kvinna" />
+        <label for="id_annat">annat</label>
+        <input type="radio" id="id_annat" name="kön" value="annat" />
+        <br />
+        <label for="id_text">Reccension</label>
+        <input
+          type="textarea"
+          id="id_text"
+          name="text"
+          placeholder="Ex: Jag önskar ett sushi recept"
+        />
+      </form>
+    </div>
   </body>
 </html>
